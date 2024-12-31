@@ -2,6 +2,8 @@
 
 This repository contains the Gemini-API chatbot assistant, organized as a monorepo using Turborepo. The project includes a Next.js frontend, a NestJS backend, and NextAuth.js v5 for authentication.
 
+https://github.com/user-attachments/assets/6090c79e-3ef2-4dbc-a072-1fd98231b07f
+
 ## Monorepo Structure
 
 The monorepo is structured as follows:
