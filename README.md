@@ -1,44 +1,62 @@
-# Turborepo starter
+# Gemini-API Chatbot Assistant
 
-This is an official starter Turborepo.
+This repository contains the Gemini-API chatbot assistant, organized as a monorepo using Turborepo. The project includes a Next.js frontend, a NestJS backend, and NextAuth.js v5 for authentication.
 
-## Using this example
+## Monorepo Structure
 
-Run the following command:
+The monorepo is structured as follows:
+- `apps/web`: The Next.js frontend application.
+- `apps/server`: The NestJS backend application.
 
-```sh
-npx create-turbo@latest
+## Prerequisites
+
+- Node.js (>= 18.x)
+- Yarn
+
+## Getting Started
+
+### Installation
+
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/akapez/gemini-chat-bot.git
+    cd gemini-chat-bot
+    ```
+
+2. Install dependencies using Yarn:
+
+    ```sh
+    yarn install
+    ```
+
+### Environment Variables
+
+Create `.env` files in the `apps/web` and `apps/server` directories with the following variables:
+
+#### Server Environment Variables (`apps/server/.env`)
+
+```env
+GEMINI_API_KEY=""
 ```
 
-## What's inside?
+#### Web Environment Variables (`apps/web/.env.development.local`)
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+```env
+API_URL=http://localhost:8080
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=""
+GITHUB_ID=""
+GITHUB_SECRET=""
+```
 
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
-pnpm build
+cd gemini-chat-bot
+yarn build
 ```
 
 ### Develop
@@ -46,39 +64,11 @@ pnpm build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
-pnpm dev
+cd gemini-chat-bot
+yarn dev
 ```
 
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
 
 ## Useful Links
 
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [Gemini API reference](https://ai.google.dev/api?lang=node)
