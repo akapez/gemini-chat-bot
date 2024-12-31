@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
-import { ProductsModule } from './products/products.module';
+import { ConfigModule } from '@nestjs/config';
+import { GeminiModule } from './gemini/gemini.module';
 
 @Module({
-  imports: [ProductsModule],
+  imports: [ConfigModule.forRoot({ isGlobal: true }), GeminiModule],
   controllers: [],
   providers: [],
 })

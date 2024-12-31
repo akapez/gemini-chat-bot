@@ -1,2 +1,2 @@
-export * from "./products/dto/create-product.request";
-export * from "./products/interfaces/product.interface";
+export * from "./prompt/dto/create-prompt.request";
+export * from "./prompt/interface/prompt.interface";
